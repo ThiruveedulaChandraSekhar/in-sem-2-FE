@@ -13,7 +13,7 @@ class Inventory extends Component {
     }
 
     loadInventory = () => {
-        callApi("GET", "http://localhost:8080/requests/inventory", "", (response) => {
+        callApi("GET", "http://localhost:30083/back1/requests/inventory", "", (response) => {
             if (response.includes("401::")) {
                 alert(response.split("::")[1]);
                 return;
